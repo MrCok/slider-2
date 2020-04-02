@@ -88,6 +88,8 @@ s5.onclick = function() {
     pauseSlideShow();
 };
 
+let clickPause = () => playing ? pauseSlideShow() : playSlideShow(); 
+
 let pressKey = (e) => {
     console.log(e.key);
     if(e.key === "ArrowLeft") {
@@ -96,9 +98,12 @@ let pressKey = (e) => {
     if(e.key === "ArrowRight") {
         nextSlide();
     }
-    // if(e.key === "") {
-    //     pauseSlideShow();
-    // } Пробел не работает
+    if(e.key === "Enter") {
+        clickPause();
+    } 
+    // if(e.key === "ArrowDown") {
+    //     playSlideShow();
+    // } 
 }; 
 
 addEventListener("keydown", pressKey);

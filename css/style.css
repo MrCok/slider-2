@@ -7,6 +7,10 @@ body {
     margin: 20px auto;
     background: #f1f1f1;
 }
+footer {
+    margin: 100px auto 0;
+    text-align: center;
+}
 h1 {
     text-align: center; 
     color: #737077;
