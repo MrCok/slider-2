@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="slides" class="slides">
+        <li class="item slide active">Название слайда 1</li>
+        <li class="item slide">Название слайда 2</li>
+        <li class="item slide">Название слайда 3</li>
+        <li class="item slide">Название слайда 4</li>
+        <li class="item slide">Название слайда 5</li>
+    </ul>
+    <div class="strelki">
+        <a class="prev" id="previous">&#10094;</a>
+        <a class="next" id="next">&#10095;</a>
+    </div>
+
+    <ol class="indicators">
+        <li id="s1" class="indicator actives" data-slide-to="0"></li>
+        <li id="s2" class="indicator" data-slide-to="1"></li>
+        <li id="s3" class="indicator" data-slide-to="2"></li>
+        <li id="s4" class="indicator" data-slide-to="3"></li>
+        <li id="s5" class="indicator" data-slide-to="4"></li>
+    </ol>
+
+    <div class="allbutton">
+        <button class="controls" id="pause">Pause</button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
