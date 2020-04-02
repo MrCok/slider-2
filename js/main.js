@@ -1,5 +1,4 @@
 var slides = document.querySelectorAll('.slide');
-// var dots = document.getElementsByClassName("slider-dots_item");
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 3000);
 
@@ -59,11 +58,11 @@ previous.onclick = function() {
     previousSlide();
 };
 
-var controls = document.querySelectorAll('.controls');
+// var controls = document.querySelectorAll('.controls');
 
-for (var i = 0; i < controls.length; i++){
-    controls[i].style.display = 'inline-block';
-}
+// for (var i = 0; i < controls.length; i++){
+//     controls[i].style.display = 'inline-block';
+// }
 s1.onclick = function() {
     goToSlide (i = 0);
     pauseSlideShow();
