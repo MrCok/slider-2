@@ -5,13 +5,17 @@ these make the slideshow work
 body {
     max-width: 1280px;
     margin: 20px auto;
+    background: #f1f1f1;
+}
+h1 {
+    text-align: center; 
+    color: #737077;
 }
 .slides {
     position: relative;
     height: 400px;
     padding: 0px;
     margin: 0px;
-    list-style-type: none;
 }
 
 .slide {

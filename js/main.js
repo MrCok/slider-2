@@ -97,7 +97,7 @@ let pressKey = (e) => {
     if(e.key === "ArrowRight") {
         nextSlide();
     }
-    if(e.key === 13) {
+    if(e.key === "") {
         pauseSlideShow();
     }
 }; 
