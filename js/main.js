@@ -97,9 +97,9 @@ let pressKey = (e) => {
     if(e.key === "ArrowRight") {
         nextSlide();
     }
-    if(e.key === "") {
-        pauseSlideShow();
-    }
+    // if(e.key === "") {
+    //     pauseSlideShow();
+    // } Пробел не работает
 }; 
 
 addEventListener("keydown", pressKey);
