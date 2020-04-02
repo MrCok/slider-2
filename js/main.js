@@ -1,7 +1,7 @@
 var slides = document.querySelectorAll('.slide');
 // var dots = document.getElementsByClassName("slider-dots_item");
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 2000);
+var slideInterval = setInterval(nextSlide, 3000);
 
 var indicatorsContainer = document.querySelector('.indicators');
 var indicators = document.querySelectorAll('.indicator');
@@ -89,13 +89,17 @@ s5.onclick = function() {
     pauseSlideShow();
 };
 
-// for (let i = 0; i < slides.Length; i++) {
-//     indicators[i].onclick = clickIndicatorBtn;
-// }
+let pressKey = (e) => {
+    console.log(e.key);
+    if(e.key === "ArrowLeft") {
+        previousSlide();
+    }
+    if(e.key === "ArrowRight") {
+        nextSlide();
+    }
+    if(e.key === 13) {
+        pauseSlideShow();
+    }
+}; 
 
-// function clickIndicatorBtn() {
-//     pauseSlideShow();
-//     goToSlide(currentSlide);
-//     // goToSlide(+this.getAttribute (qualifiedName: "data-slide-to"));
-//     // goToSlide(+target.getAttribute("data-slide-to"));
-// };
+addEventListener("keydown", pressKey);
