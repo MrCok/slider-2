@@ -111,6 +111,7 @@ addEventListener("keydown", pressKey);
 // finish с клавы
 
 //swipe
+let carousel = document.querySelector(".slides");
 let swipeStart = (e) => {
     swipeStartX = e.changedTouches[0].pageX;
 };
@@ -121,6 +122,6 @@ let swipeEnd = (e) => {
     swipeStartX - swipeEndX < -100 && nextSlide();
 };
 
-addEventListener("touchstart", swipeStart);
-addEventListener("touchend", swipeEnd);
+carousel.addEventListener("touchstart", swipeStart);
+carousel.addEventListener("touchend", swipeEnd);
 //finish swipe
