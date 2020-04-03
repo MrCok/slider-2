@@ -36,7 +36,7 @@ function playSlideShow() {
     playing = true;
     slideInterval = setInterval(nextSlide, 2000);
 }
-
+//Переключение Пауза=Воспр, по клику
 pauseButton.onclick = function() {
     if (playing) {
   	    pauseSlideShow();
@@ -63,7 +63,7 @@ previous.onclick = function() {
 // for (var i = 0; i < controls.length; i++){
 //     controls[i].style.display = 'inline-block';
 // }
-s1.onclick = function() {
+dots1.onclick = function() {
     goToSlide (i = 0);
     pauseSlideShow();
     // var dots = document.getElementsByClassName("indicator");
@@ -71,24 +71,25 @@ s1.onclick = function() {
     // var dot = document.getElementById("s1");
     // dot.style.backgroundColor = "#ccc";
 };
-s2.onclick = function() {
+dots2.onclick = function() {
     goToSlide (i = 1);
     pauseSlideShow();
 };
-s3.onclick = function() {
+dots3.onclick = function() {
     goToSlide (i = 2);
     pauseSlideShow();
 };
-s4.onclick = function() {
+dots4.onclick = function() {
     goToSlide (i = 3);
     pauseSlideShow();
 };
-s5.onclick = function() {
+dots5.onclick = function() {
     goToSlide (i = 4);
     pauseSlideShow();
 };
 
-let clickPause = () => playing ? pauseSlideShow() : playSlideShow(); 
+//с клавы
+let clickPause = () => playing ? pauseSlideShow() : playSlideShow(); // для срабатывания паузы с клавиатуры
 
 let pressKey = (e) => {
     console.log(e.key);
@@ -107,3 +108,19 @@ let pressKey = (e) => {
 }; 
 
 addEventListener("keydown", pressKey);
+// finish с клавы
+
+//swipe
+let swipeStart = (e) => {
+    swipeStartX = e.changedTouches[0].pageX;
+};
+
+let swipeEnd = (e) => {
+    swipeEndX = e.changedTouches[0].pageX;
+    swipeStartX - swipeEndX > 100 && previousSlide();
+    swipeStartX - swipeEndX < -100 && nextSlide();
+};
+
+addEventListener("touchstart", swipeStart);
+addEventListener("touchend", swipeEnd);
+//finish swipe
