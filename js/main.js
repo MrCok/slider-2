@@ -37,13 +37,20 @@ function playSlideShow() {
     slideInterval = setInterval(nextSlide, 2000);
 }
 //Переключение Пауза=Воспр, по клику
-pauseButton.onclick = function() {
-    if (playing) {
-  	    pauseSlideShow();
-    } else {
-  	    playSlideShow();
-	  }
-};
+// pauseButton.onclick = function() {
+//     if (playing) {
+//   	    pauseSlideShow();
+//     } else {
+//   	    playSlideShow();
+// 	  }
+// };
+function pausePlay() {
+    if (playing) pauseSlideShow();
+    else playSlideShow();
+}
+
+pauseButton.addEventListener("click", pausePlay);
+
 
 var next = document.querySelector('#next');
 var previous = document.querySelector('#previous');
@@ -66,7 +73,10 @@ previous.onclick = function() {
 dots1.onclick = function() {
     goToSlide (i = 0);
     pauseSlideShow();
-    // var dots = document.getElementsByClassName("indicator");
+
+
+    // !!!!!!!!!!!!!!!!!!! КОММЕНТА ДЛЯ ТЕСТА !!!!!!!!!!!!!!!
+    ////var dots = document.getElementsByClassName("indicator");
     // dots[i = 0].classList.add("actives");
     // var dot = document.getElementById("s1");
     // dot.style.backgroundColor = "#ccc";
